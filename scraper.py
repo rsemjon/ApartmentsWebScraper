@@ -26,16 +26,24 @@ class Scraper:
         }
 
 
-    def scrape_page1(self)->List[Apartment]:
-        try:
-            response = requests.get("https://www.nehnutelnosti.sk/bratislava/byty/predaj/?p[page]=1", headers = self.headers).text
-            soup = BeautifulSoup(response, 'html.parser')
-            apartments = self.extract_page1(soup)
-            
-        except Exception as e:
-            print(f"Problem with printing: {e}")
-    
-        return apartments
+    def scrape_page1(self):
+      
+        id = 1
+
+        while True:
+            try:
+                response = requests.get(f"https://www.nehnutelnosti.sk/bratislava/byty/predaj/?p[page]={id}", headers = self.headers).text
+                soup = BeautifulSoup(response, 'html.parser')
+                apartments = self.extract_page1(soup)
+
+                if not apartments:
+                    break
+                
+                self.write_to_csv(apartments)
+            except Exception as e:
+                print(f"Problem with printing: {e}")
+            id += 1
+        
     
 
     def extract_page1(self, soup:BeautifulSoup)->List[Apartment]: #page1 is nehnutelnosti.sk
@@ -58,7 +66,7 @@ class Scraper:
 
 
     def write_to_csv(self, apartments:List[Apartment])->None:
-        with open ("./apartments.csv", "w") as file:
+        with open ("./apartments.csv", "a") as file:
             fieldnames = ["link", "name", "adr", "price"]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()

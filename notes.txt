@@ -1,0 +1,6 @@
+Phase 1:
+
+Scraping page and writing to csv
+
+1. scrape one page:
+ - 

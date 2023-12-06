@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from dataclasses import dataclass, asdict
 from typing import List
 import csv
+import os
 
 @dataclass
 class Apartment:
@@ -66,9 +67,13 @@ class Scraper:
 
 
     def write_to_csv(self, apartments:List[Apartment])->None:
+        isFileCreated = os.path.exists("./apartments.csv")
         with open ("./apartments.csv", "a") as file:
             fieldnames = ["link", "name", "adr", "price"]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
-            writer.writeheader()
+
+            if not isFileCreated:
+                writer.writeheader()
+              
             for apartment in apartments:
                 writer.writerow(asdict(apartment))

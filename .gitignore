@@ -3,3 +3,4 @@ __pycache__
 .venv/
 .vscode/
 __pycache__/scraper.cpython-310.pyc
+test.py

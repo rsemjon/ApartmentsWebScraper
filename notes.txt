@@ -4,3 +4,6 @@ Scraping page and writing to csv
 
 1. scrape one page:
  - 
+
+ https://www.topreality.sk/vyhladavanie-nehnutelnosti.html?form=1&type%5B%5D=101&type%5B%5D=108&type%5B%5D=102&type%5B%5D=103&type%5B%5D=104&type%5B%5D=105&type%5B%5D=106&type%5B%5D=109&type%5B%5D=110&type%5B%5D=107&type%5B%5D=113&obec=1000000&searchType=string&distance=&q=&cena_od=&cena_do=&vymera_od=0&vymera_do=0&n_search=search&page=estate&gpsPolygon=
+ https://www.topreality.sk/vyhladavanie-nehnutelnosti-2.html?type%5B0%5D=101&type%5B1%5D=108&type%5B2%5D=102&type%5B3%5D=103&type%5B4%5D=104&type%5B5%5D=105&type%5B6%5D=106&type%5B7%5D=109&type%5B8%5D=110&type%5B9%5D=107&type%5B10%5D=113&form=1&obec=1000000&n_search=search&gpsPolygon=&searchType=string

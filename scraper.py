@@ -63,6 +63,29 @@ class Scraper:
                 print(f"Problem with writing: {e}")
             id += 1
         
+
+    def scrape_page3(self):
+      
+        id = 1
+
+        while True:
+            try:
+                if id == 1:
+                    response = requests.get(f"https://www.topreality.sk/vyhladavanie-nehnutelnosti.html?form=1&type%5B%5D=101&type%5B%5D=108&type%5B%5D=102&type%5B%5D=103&type%5B%5D=104&type%5B%5D=105&type%5B%5D=106&type%5B%5D=109&type%5B%5D=110&type%5B%5D=107&type%5B%5D=113&obec=1000000&searchType=string&distance=&q=&cena_od=&cena_do=&vymera_od=0&vymera_do=0&n_search=search&page=estate&gpsPolygon=", headers = self.headers).text
+                else:
+                    response = requests.get(f" https://www.topreality.sk/vyhladavanie-nehnutelnosti-{id}.html?type%5B0%5D=101&type%5B1%5D=108&type%5B2%5D=102&type%5B3%5D=103&type%5B4%5D=104&type%5B5%5D=105&type%5B6%5D=106&type%5B7%5D=109&type%5B8%5D=110&type%5B9%5D=107&type%5B10%5D=113&form=1&obec=1000000&n_search=search&gpsPolygon=&searchType=string", headers = self.headers).text
+                
+                soup = BeautifulSoup(response, 'html.parser')
+                apartments = self.extract_page3(soup)
+
+                if not apartments:
+                    break
+        
+                self.write_to_csv(apartments)
+            except Exception as e:
+                print(f"Problem with writing: {e}")
+            id += 1
+        
     
 
     def extract_page1(self, soup:BeautifulSoup)->List[Apartment]: #page1 is nehnutelnosti.sk
@@ -72,7 +95,7 @@ class Scraper:
 
         for apartment in apartments_in_offers:
             try:
-                
+
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
                 adr  = apartment.find("div", class_="advertisement-item--content__info").get_text().strip()
@@ -108,10 +131,28 @@ class Scraper:
         return list_of_apartments
     
     
+    def extract_page3(self, soup:BeautifulSoup)->List[Apartment]: #page3 is topreality.sk
+        offers = soup.find("div", class_="listing-items")
+        apartments_in_offers = offers.findAll("div", {"data-ga4-container-event" : "view_item_list"})
+        list_of_apartments = []
+
+        for apartment in apartments_in_offers:
+            try:
+
+                link = apartment.find("a").get("href")
+                name = apartment.find("h2").get_text().strip()
+                adr  = apartment.find("div", class_ = "location").get_text().strip()
+                price = apartment.find("strong", class_="price").get_text().strip()
+              
+                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price))
+            except Exception as e:
+                print(f"Problem with extracting informations: {e}")
+        
+        return list_of_apartments
 
     def write_to_csv(self, apartments:List[Apartment])->None:
-        isFileCreated = os.path.exists("./apartments.csv")
-        with open ("./apartments.csv", "a") as file:
+        isFileCreated = os.path.exists("./apartments-page:reality.csv")
+        with open ("./apartments-page:reality.csv", "a") as file:
             fieldnames = ["link", "name", "adr", "price"]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
 

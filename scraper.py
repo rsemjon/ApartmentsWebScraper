@@ -11,6 +11,8 @@ class Apartment:
     name: str   
     adr: str
     price: str
+    price_for_m2: str
+    total_area: str
 
 
 class Scraper:
@@ -40,6 +42,7 @@ class Scraper:
                 if not apartments:
                     break
                 
+                print(id)
                 self.write_to_csv(apartments)
             except Exception as e:
                 print(f"Problem with printing: {e}")
@@ -121,10 +124,12 @@ class Scraper:
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
                 name = apartment.find("h2", class_="offer-title").get("title").strip()
                 adr  = apartment.find("a", class_="offer-location").get_text().strip().replace("Reality", "") + " " + params[1].get_text().strip().replace("|", "")
+                total_area =  params[2].get_text().strip().replace("|", "")
+                price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip()
                 temp_price = apartment.find("p", class_="offer-price").get_text().strip()
                 price = self.modify_price(temp_price)
               
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price))
+                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
             
@@ -143,17 +148,19 @@ class Scraper:
                 name = apartment.find("h2").get_text().strip()
                 adr  = apartment.find("div", class_ = "location").get_text().strip()
                 price = apartment.find("strong", class_="price").get_text().strip()
-              
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price))
+                price_for_m2 = apartment.find("span", class_="priceArea").get_text().strip()
+                total_area = apartment.find("span", class_="value").get_text().strip()
+
+                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
         
         return list_of_apartments
 
     def write_to_csv(self, apartments:List[Apartment])->None:
-        isFileCreated = os.path.exists("./apartments-page:reality.csv")
-        with open ("./apartments-page:reality.csv", "a") as file:
-            fieldnames = ["link", "name", "adr", "price"]
+        isFileCreated = os.path.exists("./apartments.csv")
+        with open ("./apartments.csv", "a") as file:
+            fieldnames = ["link", "name", "adr", "price","price_for_m2", "total_area" ]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
 
             if not isFileCreated:

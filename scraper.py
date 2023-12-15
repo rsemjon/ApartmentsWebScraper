@@ -43,7 +43,7 @@ class Scraper:
                     break
                 
                 print(id)
-                self.write_to_csv(apartments)
+                self.write_to_csv(apartments, "./data/page:nehnutelnosti.csv")
             except Exception as e:
                 print(f"Problem with printing: {e}")
             id += 1
@@ -61,7 +61,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments)
+                self.write_to_csv(apartments, "./data/page:reality.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -84,7 +84,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments)
+                self.write_to_csv(apartments, "./data/page:topreality.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -159,9 +159,9 @@ class Scraper:
         
         return list_of_apartments
 
-    def write_to_csv(self, apartments:List[Apartment])->None:
-        isFileCreated = os.path.exists("./apartments.csv")
-        with open ("./apartments.csv", "a") as file:
+    def write_to_csv(self, apartments:List[Apartment], file_name:str)->None:
+        isFileCreated = os.path.exists(file_name)
+        with open (file_name, "a") as file:
             fieldnames = ["link", "name", "adr", "price","price_for_m2", "total_area" ]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
 

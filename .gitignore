@@ -1,6 +1,6 @@
-__pycache__
-.idea/
 .venv/
 .vscode/
-__pycache__/scraper.cpython-310.pyc
+__pycache__/
 test.py
+notes.txt
+links_to_sourcewebsites.txt

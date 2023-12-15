@@ -2,7 +2,7 @@ from scraper import Scraper
 
 def main()->None:
     scraper = Scraper()
-    scraper.scrape_page2()
+    scraper.scrape_page1()
     
 
 if __name__ == "__main__":

@@ -104,7 +104,7 @@ class Scraper:
                 adr  = apartment.find("div", class_="advertisement-item--content__info").get_text().strip()
                 price = apartment.find("div", class_="advertisement-item--content__price").get("data-adv-price")
                 price_for_m2 = apartment.find("span", class_="advertisement-item--content__price-unit").get_text().strip()
-                total_area = apartment.find("div", class_="advertisement-item--content__info").find("span").get_text().strip()
+                total_area = apartment.find("div", class_="advertisement-item--content").find("span").get_text().strip()
               
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:

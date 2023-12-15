@@ -42,8 +42,7 @@ class Scraper:
                 if not apartments:
                     break
                 
-                print(id)
-                self.write_to_csv(apartments, "./data/page:nehnutelnosti.csv")
+                self.write_to_csv(apartments, "./data/tests/page:nehnutelnosti.csv")
             except Exception as e:
                 print(f"Problem with printing: {e}")
             id += 1
@@ -61,7 +60,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/page:reality.csv")
+                self.write_to_csv(apartments, "./data/tests/page:reality.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -84,7 +83,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/page:topreality.csv")
+                self.write_to_csv(apartments, "./data/tests/page:topreality.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -99,14 +98,16 @@ class Scraper:
         for apartment in apartments_in_offers:
             try:
 
+                adr  = apartment.find("div", class_="advertisement-item--content__info").get_text().strip()
+               
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
-                adr  = apartment.find("div", class_="advertisement-item--content__info").get_text().strip()
+                modified_adr = self.modify_adr(adr)
                 price = apartment.find("div", class_="advertisement-item--content__price").get("data-adv-price")
                 price_for_m2 = apartment.find("span", class_="advertisement-item--content__price-unit").get_text().strip()
                 total_area = apartment.find("div", class_="advertisement-item--content").find("span").get_text().strip()
-              
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
+
+                list_of_apartments.append(Apartment(link=link, name=name, adr=modified_adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
         
@@ -122,16 +123,17 @@ class Scraper:
             try:
 
                 params = apartment.find("p", class_="offer-params").findAll()
+                temp_price = apartment.find("p", class_="offer-price").get_text().strip()
+                adr  = params[1].get_text().strip().replace("|", "") + apartment.find("a", class_="offer-location").get_text().strip().replace("Reality", "")
 
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
                 name = apartment.find("h2", class_="offer-title").get("title").strip()
-                adr  = apartment.find("a", class_="offer-location").get_text().strip().replace("Reality", "") + " " + params[1].get_text().strip().replace("|", "")
+                modified_adr = self.modify_adr(adr)
                 total_area =  params[2].get_text().strip().replace("|", "")
                 price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip()
-                temp_price = apartment.find("p", class_="offer-price").get_text().strip()
                 price = self.modify_price(temp_price)
               
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
+                list_of_apartments.append(Apartment(link=link, name=name, adr=modified_adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
             
@@ -145,15 +147,16 @@ class Scraper:
 
         for apartment in apartments_in_offers:
             try:
+                adr  = apartment.find("div", class_ = "location").get_text().strip()
 
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
-                adr  = apartment.find("div", class_ = "location").get_text().strip()
+                modified_adr = self.modify_adr(adr)
                 price = apartment.find("strong", class_="price").get_text().strip()
                 price_for_m2 = apartment.find("span", class_="priceArea").get_text().strip()
                 total_area = apartment.find("span", class_="value").get_text().strip()
 
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
+                list_of_apartments.append(Apartment(link=link, name=name, adr=modified_adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
         
@@ -182,3 +185,12 @@ class Scraper:
     def modify_price(self, price:str)->str:
         if "€" in price:
             return price[:self.find_index("€", price)]
+        
+    def modify_adr(self, adr:str)->str:
+        replacements = ["Bratislava", "okres", " I ", " II ", " III ", " IV ", " V ", "-", " ", ",", "(I)", "(II)", "(III)", "(IV)", "(V)"]
+
+        new_adr = adr
+        for replacement in replacements:
+            new_adr = new_adr.replace(replacement, "")
+
+        return new_adr.lower()

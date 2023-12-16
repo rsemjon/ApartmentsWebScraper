@@ -11,9 +11,9 @@ class Apartment:
     link: str
     name: str   
     adr: str
-    price: str
-    price_for_m2: str
-    total_area: str
+    price: float
+    price_for_m2: float
+    total_area: float
 
 
 class Scraper:
@@ -43,7 +43,7 @@ class Scraper:
                 if not apartments:
                     break
                 
-                self.write_to_csv(apartments, "./data/tests/page:nehnutelnosti.csv")
+                self.write_to_csv(apartments, "./data/tests/page:nehnutelnosti_1.csv")
             except Exception as e:
                 print(f"Problem with printing: {e}")
             id += 1
@@ -100,13 +100,16 @@ class Scraper:
             try:
 
                 adr  = apartment.find("div", class_="advertisement-item--content__info").get_text().strip()
-                price = apartment.find("div", class_="advertisement-item--content__price").get("data-adv-price")
-                price_for_m2 = apartment.find("span", class_="advertisement-item--content__price-unit").get_text().strip()
-                total_area = apartment.findAll("div", class_="advertisement-item--content__info")[1].find("span").get_text().strip()
+                price = apartment.find("div", class_="advertisement-item--content__price").get("data-adv-price").replace(",", ".")
+                price_for_m2 = apartment.find("span", class_="advertisement-item--content__price-unit").get_text().strip().replace(",", ".")
+                total_area = apartment.findAll("div", class_="advertisement-item--content__info")[1].find("span").get_text().strip().replace(",", ".").replace("m2", "")
                
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
+                price = float(re.sub(r'[^0-9.]', '', price))
+                price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
+                total_area = float(re.sub(r'[^0-9.]', '', total_area))
         
 
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
@@ -127,16 +130,18 @@ class Scraper:
                 params = apartment.find("p", class_="offer-params").findAll()
                 temp_price = apartment.find("p", class_="offer-price").get_text().strip()
                 adr  = params[1].get_text().strip().replace("|", "") + apartment.find("a", class_="offer-location").get_text().strip().replace("Reality", "")
-                total_area =  params[2].get_text().strip().replace("|", "")
-                price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip()
-                price = self.modify_price(temp_price)
+                total_area =  params[2].get_text().strip().replace("|", "").replace(",", ".").replace("m2", "")
+                price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip().replace(",", ".")
+                price = self.modify_price(temp_price).replace(",", ".")
 
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
                 name = apartment.find("h2", class_="offer-title").get("title").strip()
                 adr = self.modify_adr(adr)
-                price = float(re.sub('\D', '', price))
-                price_for_m2 = float(re.sub('\D', '', price_for_m2))
-                total_area = float(re.sub('\D', '', total_area))
+                price = float(re.sub(r'[^0-9.]', '', price))
+                price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
+                total_area = float(re.sub(r'[^0-9.]', '', total_area))
+        
+            
               
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
             except Exception as e:
@@ -153,20 +158,23 @@ class Scraper:
         for apartment in apartments_in_offers:
             try:
                 adr  = apartment.find("div", class_ = "location").get_text().strip()
-                price = apartment.find("strong", class_="price").get_text().strip()
-                price_for_m2 = apartment.find("span", class_="priceArea").get_text().strip()
-                total_area = apartment.find("span", class_="value").get_text().strip()
+                price = apartment.find("strong", class_="price").get_text().strip().replace(",", ".")
+                price_for_m2 = apartment.find("span", class_="priceArea").get_text().strip().replace(",", ".")
+                total_area = apartment.find("span", class_="value").get_text().strip().replace(",", ".").replace("m2", "")
 
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
-                price = float(re.sub('\D', '', price))
-                price_for_m2 = float(re.sub('\D', '', price_for_m2))
-                total_area = float(re.sub('\D', '', total_area))
+                price = float(re.sub(r'[^0-9.]', '', price))
+                price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
+                total_area = float(re.sub(r'[^0-9.]', '', total_area))
+        
+               
 
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
+              
         
         return list_of_apartments
 

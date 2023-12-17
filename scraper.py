@@ -43,7 +43,7 @@ class Scraper:
                 if not apartments:
                     break
                 
-                self.write_to_csv(apartments, "./data/tests/page:nehnutelnosti_1.csv")
+                self.write_to_csv(apartments, "./data/work_data/data.csv")
             except Exception as e:
                 print(f"Problem with printing: {e}")
             id += 1
@@ -61,7 +61,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/tests/page:reality.csv")
+                self.write_to_csv(apartments, "./data/work_data/data.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -84,7 +84,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/tests/page:topreality.csv")
+                self.write_to_csv(apartments, "./data/work_data/data.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1

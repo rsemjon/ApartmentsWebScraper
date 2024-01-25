@@ -61,7 +61,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/work_data/data.csv")
+                self.write_to_csv(apartments, "./data/work_data/reality_data.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -84,7 +84,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/work_data/data.csv")
+                self.write_to_csv(apartments, "./data/work_data/top_reality_data2.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -128,11 +128,11 @@ class Scraper:
             try:
 
                 params = apartment.find("p", class_="offer-params").findAll()
-                temp_price = apartment.find("p", class_="offer-price").get_text().strip()
+                price = apartment.find("p", class_="offer-price").get_text().replace(apartment.find("p", class_="offer-price").find("small").get_text(), "").strip()
                 adr  = params[1].get_text().strip().replace("|", "") + apartment.find("a", class_="offer-location").get_text().strip().replace("Reality", "")
                 total_area =  params[2].get_text().strip().replace("|", "").replace(",", ".").replace("m2", "")
                 price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip().replace(",", ".")
-                price = self.modify_price(temp_price).replace(",", ".")
+                
 
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
                 name = apartment.find("h2", class_="offer-title").get("title").strip()
@@ -158,14 +158,14 @@ class Scraper:
         for apartment in apartments_in_offers:
             try:
                 adr  = apartment.find("div", class_ = "location").get_text().strip()
-                price = apartment.find("strong", class_="price").get_text().strip().replace(",", ".")
+                price_plus_provision = apartment.find("strong", class_="price").get_text().strip()
                 price_for_m2 = apartment.find("span", class_="priceArea").get_text().strip().replace(",", ".")
                 total_area = apartment.find("span", class_="value").get_text().strip().replace(",", ".").replace("m2", "")
 
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
-                price = float(re.sub(r'[^0-9.]', '', price))
+                price = self.add_provision(price_plus_provision)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = float(re.sub(r'[^0-9.]', '', total_area))
         
@@ -197,10 +197,6 @@ class Scraper:
                 break
         return i
     
-
-    def modify_price(self, price:str)->str:
-        if "€" in price:
-            return price[:self.find_index("€", price)]
         
     def modify_adr(self, adr:str)->str:
         replacements = ["Bratislava", "okres", " I ", " II ", " III ", " IV ", " V ", "-", " ", ",", "(I)", "(II)", "(III)", "(IV)", "(V)"]
@@ -210,3 +206,12 @@ class Scraper:
             new_adr = new_adr.replace(replacement, "")
 
         return new_adr.lower()
+    
+    def add_provision(self, price:str)->float:
+        if "+" in price:
+            prices = price.split("+")
+            apartment_price = float(re.sub(r'[^0-9.]', '', prices[0].replace(",", ".").strip()))
+            provision = float(re.sub(r'[^0-9.]', '', prices[1].replace(",", ".").strip()))
+            return apartment_price + provision
+        
+        return float(re.sub(r'[^0-9.]', '', price.replace(",", ".").strip()))

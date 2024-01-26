@@ -61,7 +61,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/work_data/reality_data.csv")
+                self.write_to_csv(apartments, "./data/work_data/data.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -84,11 +84,10 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/work_data/top_reality_data2.csv")
+                self.write_to_csv(apartments, "./data/work_data/data.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
-        
     
 
     def extract_page1(self, soup:BeautifulSoup)->List[Apartment]: #page1 is nehnutelnosti.sk
@@ -109,8 +108,7 @@ class Scraper:
                 adr = self.modify_adr(adr)
                 price = float(re.sub(r'[^0-9.]', '', price))
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
-                total_area = float(re.sub(r'[^0-9.]', '', total_area))
-        
+                total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
 
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
@@ -133,16 +131,13 @@ class Scraper:
                 total_area =  params[2].get_text().strip().replace("|", "").replace(",", ".").replace("m2", "")
                 price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip().replace(",", ".")
                 
-
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
                 name = apartment.find("h2", class_="offer-title").get("title").strip()
                 adr = self.modify_adr(adr)
                 price = float(re.sub(r'[^0-9.]', '', price))
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
-                total_area = float(re.sub(r'[^0-9.]', '', total_area))
+                total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
         
-            
-              
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
@@ -167,16 +162,14 @@ class Scraper:
                 adr = self.modify_adr(adr)
                 price = self.add_provision(price_plus_provision)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
-                total_area = float(re.sub(r'[^0-9.]', '', total_area))
+                total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
         
-               
-
                 list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
               
-        
         return list_of_apartments
+
 
     def write_to_csv(self, apartments:List[Apartment], file_name:str)->None:
         isFileCreated = os.path.exists(file_name)
@@ -207,6 +200,7 @@ class Scraper:
 
         return new_adr.lower()
     
+
     def add_provision(self, price:str)->float:
         if "+" in price:
             prices = price.split("+")

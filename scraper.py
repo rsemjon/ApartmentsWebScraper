@@ -106,7 +106,7 @@ class Scraper:
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
-                price = float(re.sub(r'[^0-9.]', '', price))
+                price = round(float(re.sub(r'[^0-9.]', '', price)), 2)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
 
@@ -134,7 +134,7 @@ class Scraper:
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
                 name = apartment.find("h2", class_="offer-title").get("title").strip()
                 adr = self.modify_adr(adr)
-                price = float(re.sub(r'[^0-9.]', '', price))
+                price = round(float(re.sub(r'[^0-9.]', '', price)), 2)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
         
@@ -160,7 +160,7 @@ class Scraper:
                 link = apartment.find("a").get("href")
                 name = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
-                price = self.add_provision(price_plus_provision)
+                price = round(self.add_provision(price_plus_provision), 2)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
         

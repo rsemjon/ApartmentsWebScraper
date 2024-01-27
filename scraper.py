@@ -126,7 +126,7 @@ class Scraper:
             try:
 
                 params = apartment.find("p", class_="offer-params").findAll()
-                price = apartment.find("p", class_="offer-price").get_text().replace(apartment.find("p", class_="offer-price").find("small").get_text(), "").strip()
+                price = apartment.find("p", class_="offer-price").get_text().replace(apartment.find("p", class_="offer-price").find("small").get_text(), "").replace(",", ".").strip()
                 adr  = params[1].get_text().strip().replace("|", "") + apartment.find("a", class_="offer-location").get_text().strip().replace("Reality", "")
                 total_area =  params[2].get_text().strip().replace("|", "").replace(",", ".").replace("m2", "")
                 price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip().replace(",", ".")
@@ -182,13 +182,6 @@ class Scraper:
               
             for apartment in apartments:
                 writer.writerow(asdict(apartment))
-
-
-    def find_index(self, char:str, string:str)->int:
-        for i in range(len(string)):
-            if string[i] == char:
-                break
-        return i
     
         
     def modify_adr(self, adr:str)->str:

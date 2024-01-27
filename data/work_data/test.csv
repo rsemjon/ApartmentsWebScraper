@@ -1,10 +1,10 @@
 link,name,adr,price,price_for_m2,total_area
 a, aaa, aaa, 5, 5,5
-a, aaa, bbb, 5, 5,5
-a, aaa, bbb, 5, 5,5
+a, aaa, aaa, 5, 5,5
 a, aaa, aaa, 6, 5,5
-a, aaa, bbb, 6, 5,5
-a, aaa, bbb, 6, 5,5
-a, aaa, gh, 6, 5,5
-a, aaa, gh, 6, 5,5
-a, aaa, j, 6, 5,5
+a, aaa, aaa, 6, 5,5
+a, aaa, bbb, 2, 5,5
+a, aaa, bbb, 10, 5,5
+a, aaa, ccc, 3, 5,5
+a, aaa, ccc, 7, 5,5
+

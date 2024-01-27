@@ -43,7 +43,7 @@ class Scraper:
                 if not apartments:
                     break
                 
-                self.write_to_csv(apartments, "./data/work_data/data.csv")
+                self.write_to_csv(apartments, "./data/work_data/data-nehnutelnostisk.csv")
             except Exception as e:
                 print(f"Problem with printing: {e}")
             id += 1

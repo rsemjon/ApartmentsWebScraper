@@ -1,34 +1,127 @@
 link,name,adr,price,price_for_m2,total_area
-a, aaa, aaa, 5, 5,5
-a, aaa, aaa, 5, 5,5
-a, aaa, aaa, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, aaa, aaa, 6, 5,5
-a, aaa, aaa, 6, 5,5
-a, s, aaa, 6, 5,5
-a, s, aaa, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, aaa, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, ccc, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-a, s, bbb, 6, 5,5
-
-
+https://www.nehnutelnosti.sk/5076674/vyrazna-zlava-byt-80-m2-bratislava-i-stare-mesto-sancova-ulica/,"VÝRAZNÁ ZĹAVA - BYT - 80 M2 - BRATISLAVA I - STARÉ MESTO, ŠANCOVÁ ULICA",šancovástarémesto,269900.0,3373.75,80
+https://www.nehnutelnosti.sk/5106451/vyrazna-zlava-byt-3-izbovy-74-m2-bratislava-stare-mesto-sancova-ulica/,"VÝRAZNÁ ZĽAVA - Byt - 3 izbový , 74 m2 , Bratislava - Staré mesto , Šancová ulica",šancovástarémesto,249900.0,3203.85,78
+https://www.nehnutelnosti.sk/5377614/premiovy-penthouse-so-zapadnou-terasou-s-vyhladom-na-dunaj-a-downtown/,PRÉMIOVÝ PENTHOUSE SO ZÁPADNOU TERASOU S VÝHĽADOM NA DUNAJ A DOWNTOWN,prístavnáružinov,614900.0,5800.94,106
+https://www.nehnutelnosti.sk/5338314/predam-byt-po-kompletnej-rekonstrukcii/,Predam byt po kompletnej rekonstrukcii,repašskéhodúbravka,142990.0,3574.75,40
+https://www.nehnutelnosti.sk/5381732/kompletne-zrekonstruovany-1-izbovy-byt-so-samostatnou-kuchynou/,Kompletne zrekonštruovaný 1 izbový byt so samostatnou kuchyňou,jasovskápetržalka,126000.0,3487.41,36
+https://www.nehnutelnosti.sk/5355287/utulny-3-izbovy-byt-v-tichej-lokalite-s-mnozstvom-zelene/,Útulný 3 izbový byt v tichej lokalite s množstvom zelene,rača,180000.0,2857.14,63
+https://www.nehnutelnosti.sk/5275500/byvajte-v-centre-mesta-s-vyhladom-na-hrad/,Bývajte v centre mesta s výhľadom na hrad,škovránčiastarémesto,229000.0,5409.87,42
+https://www.nehnutelnosti.sk/5227350/ba-v-topolcianska-kompletne-zrekonstruovany-3i-byt-s-kuchynou-a-klimatizaciou-86-m2-2x-loggia/,"BA V - Topoľčianska, kompletne zrekonštruovaný 3i byt s kuchyňou a klimatizáciou, 86 m2, 2x loggia",topoľčianskapetržalka,229990.0,2674.3,86
+https://www.nehnutelnosti.sk/5236275/nova-cena-zlava-15-000-ba-petrzalka-sustekova-ul-krasny-novo-zrekonstruovany-3i-byt-s-no/,"NOVÁ CENA: ZĽAVA 15.000€ - BA Petržalka - Šustekova ul. - krásny, novo - zrekonštruovaný 3i byt s no",šustekovapetržalka,234990.0,2937.38,80
+https://www.nehnutelnosti.sk/5369105/jedinecny-velkometrazny-6izb-byt-s-vyhladom-na-bratislavsky-hrad/,Jedinečný veľkometrážny 6izb.byt s výhľadom na Bratislavský hrad,krasovskéhopetržalka,1150000.0,5156.95,223
+https://www.nehnutelnosti.sk/5288163/predaj-zariadeneho-3i-bytu-novostavba-cubicon-gardens-ba-iv/,"PREDAJ zariadeného 3i bytu - Novostavba Cubicon Gardens, BA IV",rudolfamockakarlovaves,289900.0,4550.31,64
+https://www.nehnutelnosti.sk/5164191/predaj-krasneho-zariad-2i-apartmanu-ba-ii-novostavba-bazova/,"PREDAJ krásneho, zariad. 2i apartmánu, BA II - NOVOSTAVBA BAZOVA",bazováružinov,320000.0,6695.96,48
+https://www.nehnutelnosti.sk/5225440/super-ponuka-3-izb-byt-v-danubius-one-a-dankuchen/,Super ponuka 3 izb byt v Danubius ONE a Dankuchen,jégého16999/10ružinov,429999.0,5127.58,84
+https://www.nehnutelnosti.sk/5292712/ponukam-vam-na-prenajom-byt-s-dispoziciou-2-1-s-moznostou-odkupenia/,PONÚKAM VÁM NA PRENÁJOM BYT S DISPOZÍCIOU 2+1 S MOŽNOSŤOU ODKÚPENIA,kpt.rašudúbravka,175000.0,3333.33,52
+https://www.nehnutelnosti.sk/5380006/predam-byt-po-kompletnej-rekonstrukcii/,Predam byt po kompletnej rekonstrukcii,mesačná3241/13ružinov,159990.0,3720.7,43
+https://www.nehnutelnosti.sk/5375174/vynimocny-3-izbovy-tehlovy-byt-s-dvomi-balkonmi-len-par-krokov-od-oc-nivy/,Výnimočný 3 izbový tehlový byt s dvomi balkónmi len pár krokov od OC Nivy,košická16ružinov,329900.0,4284.42,77
+https://www.nehnutelnosti.sk/5375281/vynimocny-2-izbovy-byt-s-balkonom-priamo-na-dulovom-namesti/,Výnimočný 2 izbový byt s balkónom priamo na Dulovom námestí,dulovonámestie4starémesto,259000.0,4163.32,62
+https://www.nehnutelnosti.sk/5320465/moderne-zariadeny-2-izbovy-byt-navrhnuty-dizajnerkou-blizko-blumentalu/,Moderne zariadený 2 izbový byt navrhnutý dizajnérkou blízko Blumentálu,wilsonova1starémesto,249900.0,4900.0,51
+https://www.nehnutelnosti.sk/5294136/klimatizovany-3-izbovy-byt-s-krasnym-vyhladom-v-blizkosti-cyklotrasy-na-devin/,Klimatizovaný 3 izbový byt s krásnym výhľadom v blízkosti cyklotrasy na Devín,matejkovakarlovaves,181990.0,2882.78,63
+https://www.nehnutelnosti.sk/5365006/bosen-priestranny-3-izb-mezonet-v-blizkosti-stareho-mesta-kocelova-112-m2/,"BOSEN | Priestranný 3 izb. mezonet v blízkosti Starého Mesta, Koceľova, 112 m2",koceľovaružinov,359990.0,3205.61,112
+https://www.nehnutelnosti.sk/5343917/bosen-vkusny-priestorovo-velkorysy-2-izb-byt-vienna-gate-bratislava-m-c-petrzalka-81-m2/,"BOSEN | Vkusný, priestorovo veľkorysý 2 izb. byt, Vienna Gate, Bratislava - m.č. Petržalka, 81 m2",kopčianskapetržalka,274000.0,3399.5,81
+https://www.nehnutelnosti.sk/5327713/bosen-industrialny-1-5kk-byt-v-novostavbe-bory-byvanie-3-54-m2/,"BOSEN | Industriálny 1,5kk byt v novostavbe Bory Bývanie 3, 54 m2",jánalangoša5lamač,159990.0,2952.39,54
+https://www.nehnutelnosti.sk/5230035/bosen-4-izbovy-byt-v-rodinnom-dome-so-zahradou-134-m2-pernecka-ul-bratislava/,"BOSEN | 4 izbový byt v rodinnom dome so záhradou 134 m2, Pernecká ul., Bratislava",perneckákarlovaves,569999.0,1979.16,288
+https://www.nehnutelnosti.sk/5091961/bosen-3-5-izbovy-byt-v-povodnom-stave-martincekova-ul-ba-ruzinov-78-m2/,"BOSEN | 3,5 izbový byt v pôvodnom stave, Martinčekova ul., BA - Ružinov, 78 m2",martinčekovaružinov,189990.0,2653.49,72
+https://www.nehnutelnosti.sk/5059526/bosen-bory-byvanie-3-2kk-byt-v-novostavbe-lamac/,"BOSEN | Bory Bývanie 3: 2kk byt v novostavbe, Lamač",jánalangošalamač,189990.0,3162.81,60
+https://www.nehnutelnosti.sk/4999823/bosen-zrekonstruovany-1-izbovy-byt-karlova-ves-ulica-tilgnerova/,"BOSEN | Zrekonštruovaný 1 izbový byt, Karlova Ves, ulica Tilgnerova",tilgnerovakarlovaves,124000.0,4061.58,31
+https://www.nehnutelnosti.sk/4798484/bosen-znizena-cena-priestranny-3-izbovy-byt-racianska-nove-mesto-127-15-m2/,"BOSEN | Znížená cena: Priestranný 3 izbový byt, Račianska, Nové Mesto, 127,15 m2",račianskanovémesto,389900.0,3066.46,127
+https://www.nehnutelnosti.sk/5376428/kompletne-zrekonstruovany-1-5-izbovy-byt-pri-strkovci/,"Kompletne zrekonštruovaný 1,5 izbový byt pri Štrkovci",medzilaboreckáružinov,173900.0,3780.43,46
+https://www.nehnutelnosti.sk/5384366/slnecny-ciastocne-zrekonstruovany-4-izbovy-byt-s-velkou-loggiou-v-tichom-prostredi-pri-parku/,"Slnečný, čiastočne zrekonštruovaný 4 izbový byt s veľkou loggiou v tichom prostredí pri parku",nemčíkovadúbravka,205000.0,2277.78,90
+https://www.nehnutelnosti.sk/5384093/2-izbovy-byt-s-balkonom-a-loggiou-v-povodnom-stave-vo-vyhladavanej-lokalite/,2-izbový byt s balkónom a loggiou v pôvodnom stave vo vyhľadávanej lokalite,sibírskanovémesto,175000.0,3365.38,52
+https://www.nehnutelnosti.sk/5384377/kompletne-zariadeny-3-izbovy-byt-v-novostavbe-s-loggiou-a-parkovacim-miestom/,Kompletne zariadený 3 izbový byt v NOVOSTAVBE s loggiou a parkovacím miestom,bystrickádevínskanováves,254990.0,3541.53,72
+https://www.nehnutelnosti.sk/5384428/2-izbovy-byt-v-novostavbe-slnecnice-s-loggiou-a-parkovacim-miesto/,2 izbový byt v NOVOSTAVBE Slnečnice s loggiou a parkovacím miesto,labutiapetržalka,199900.0,4543.18,44
+https://www.nehnutelnosti.sk/5351224/na-predaj-3-izb-byt-krasny-vyhlad-na-drazdiak-2-lodzie-znievska-ul/,"Na predaj 3-izb. byt, krásny výhľad na Draždiak, 2 lodžie, Znievska ul",znievska3023/15petržalka,179000.0,2318.65,77
+https://www.nehnutelnosti.sk/5386068/velky-2-izbovy-byt-v-novostavbe-v-ruzinove-na-ulici-hrachova/,Veľký 2 izbový byt v Novostavbe v Ružinove na ulici Hrachová,hrachováružinov,225000.0,2960.53,76
+https://www.nehnutelnosti.sk/5386069/ocarujuci-2-izbovy-byt-v-starom-meste-na-ulici-wilsonova/,Očarujúci 2 izbový byt v Starom meste na ulici Wilsonova,wilsonovastarémesto,266000.0,4898.71,54
+https://www.nehnutelnosti.sk/5362094/neibrs-na-predaj-4i-byt-135m2-po-kompletnej-rekonstrukcii-dvojgaraz-balkon-krb-velka-pivnica/,"Neibrs | Na predaj 4i byt, 135m2 po kompletnej rekonštrukcii, dvojgaráž, balkón, krb, veľká pivnica,",mudroňovastarémesto,649000.0,4807.41,135
+https://www.nehnutelnosti.sk/5281820/na-predaj-4-izbovy-byt-s-loggiou-v-kludnom-prostredi-bratislava-devinska-nova-ves/,Na predaj 4 - izbový byt s loggiou v kľudnom prostredí Bratislava - Devínska Nová Ves,jánasmrekadevínskanováves,209000.0,2580.25,81
+https://www.nehnutelnosti.sk/5375929/na-predaj-exkluzivne-1-izbovy-byt-na-ul-rajecka-vrakuna/,"Na  predaj exkluzívne 1-izbový byt na ul. Rajecká, Vrakuňa.",rajeckávrakuňa,122900.0,2858.14,43
+https://www.nehnutelnosti.sk/5299356/na-predaj-dizajnovy-a-velky-3-izbovy-byt-nova-precizna-kompletna-rek-petrzalka-dvory/,"NA PREDAJ DIZAJNOVÝ A VEĽKÝ 3-IZBOVÝ BYT, NOVÁ PRECÍZNA KOMPLETNÁ REK., PETRŽALKA - DVORY",švabinskéhopetržalka,229900.0,3056.37,75
+https://www.nehnutelnosti.sk/5299255/na-predaj-moderny-3-izb-byt-nova-kompletna-rek-klimatizacia-petrzalka-luky/,"NA PREDAJ MODERNÝ 3-IZB. BYT, NOVÁ KOMPLETNÁ REK., KLIMATIZÁCIA, PETRŽALKA – LÚKY",budatínskapetržalka,229900.0,3284.29,70
+https://www.nehnutelnosti.sk/5228607/babony-tre-3-izbovy-byt-s-terasou-a-zahradkou-na-turbinovej-1-v-ba/,Babony TRE | 3 izbový byt s terasou a záhradkou na Turbínovej 1 v BA,turbínovánovémesto,257040.0,3570.0,72
+https://www.nehnutelnosti.sk/5369739/4izb-byt-s-predzahradkou-ba-iii-hruskova-ul-novostavba-pozemok-2x-parkovacie-miesto-v-cene/,"4izb. byt s predzáhradkou, BA III. Hrušková ul. novostavba /pozemok, 2x parkovacie miesto v cene/",hruskovarača,360000.0,4500.0,80
+https://www.nehnutelnosti.sk/5369658/5izb-byt-ba-ii-platanova-ul-novostavba-vo-vystavbe-2x-parkovacie-miesto-v-cene/,"5izb. byt , BA II. Platanová ul. novostavba vo výstavbe / 2x parkovacie miesto v cene/",platanovavrakuňa,309000.0,2663.79,116
+https://www.nehnutelnosti.sk/5349715/dvojgarsonka-s-panoramatickym-vyhladom/,Dvojgarsónka s panoramatickým výhľadom,beňadickápetržalka,136000.0,3661.82,37
+https://www.nehnutelnosti.sk/5164648/3i-byt-s-balkonom-po-kompletnej-rekonstrukcii-z-r-2023-narcisova-ul/,"3i byt s balkónom, po kompletnej rekonštrukcii z r. 2023, Narcisová ul",narcisováružinov,205000.0,3405.32,60
+https://www.nehnutelnosti.sk/5379222/velkometrazny-penthouse-s-vysokymi-stropmi-a-krasnym-juhozapadnym-vyhladom-na-dunaj-a-mrakodrap/,VEĽKOMETRÁŽNY PENTHOUSE S VYSOKÝMI STROPMI A KRÁSNYM JUHOZÁPADNÝM VÝHĽADOM NA DUNAJ A MRAKODRAP,prístavnáružinov,759900.0,6228.69,122
+https://www.nehnutelnosti.sk/5291089/berg-bauman-predaj-3-izbovy-byt-top-rekonstrukcia-ruzinov/,"Berg & Bauman – PREDAJ - 3-izbový byt, TOP REKONŠTRUKCIA, RUŽINOV",astrová54ružinov,179990.0,3599.8,50
+https://www.nehnutelnosti.sk/5379620/3-izbovy-byt-s-bonusom/,3 - izbový byt s BONUSOM,andrusovova910/3petržalka,207900.0,3013.04,69
+https://www.nehnutelnosti.sk/5212333/zwirn-2-izbak-kuchyna-zadarmo/,ZWIRN - 2 IZBAK+ Kuchyňa ZADARMO !,svätoplukova1463/2ružinov,355900.0,6699.92,53
+https://www.nehnutelnosti.sk/5014959/3-izbovy-novostavba-ruzinov-vo-vystavbe/,"3 izbový, novostavba, Ružinov VO VÝSTAVBE",ružovádolina33ružinov,329000.0,3386.17,97
+https://www.nehnutelnosti.sk/5330142/penthousovy-3-izbovy-byt-v-starom-meste-parkovacie-miesto-a-kobka-v-cene/,"Penthousový 3 izbový byt v Starom meste, parkovacie miesto a kobka v cene",ľadovástarémesto,569000.0,3349.42,170
+https://www.nehnutelnosti.sk/5374176/3-izbovy-byt-loggia-predaj-mamateyova-bratislava-petrzalka/,"3-izbový byt, loggia, predaj, Mamateyova, Bratislava - Petržalka",mamateyovapetržalka,214900.0,2929.39,73
+https://www.nehnutelnosti.sk/5352344/bosen-stylovy-2-izbovy-byt-po-kompletnej-rekonstrukcii-ruzinov-nivy-40m2/,"BOSEN | Štýlový 2 izbový byt, po kompletnej rekonštrukcií, Ružinov - Nivy, 40m2",miletičováružinov,204999.0,5540.51,37
+https://www.nehnutelnosti.sk/5135761/zelene-zaluhy-1-izb-byt-s-predzahradkou-a-terasou-a206/,Zelené Záluhy | 1-izb. byt s predzáhradkou a terasou A206,hanulovadúbravka,201500.0,5713.07,35
+https://www.nehnutelnosti.sk/5378763/herrys-na-predaj-komfortny-2-izbovy-byt-v-prave-kolaudovanom-projekte-pod-vinicou/,HERRYS - Na predaj komfortný 2-izbový byt v práve kolaudovanom projekte Pod Vinicou,skalickácestanovémesto,239900.0,3789.89,63
+https://www.nehnutelnosti.sk/5378762/herrys-na-predaj-komfortny-2-izbovy-byt-v-prave-kolaudovanom-projekte-pod-vinicou/,HERRYS - Na predaj komfortný 2-izbový byt v práve kolaudovanom projekte Pod Vinicou,skalickácestanovémesto,239900.0,3789.89,63
+https://www.nehnutelnosti.sk/5366307/herrys-na-predaj-krasny-3-izbovy-byt-po-kompletnej-rekonstrukcii-v-lokalite-500-bytov-nivy/,HERRYS - Na predaj krásny 3 izbový byt po kompletnej rekonštrukcii v lokalite 500 bytov - Nivy,budovateľskáružinov,285000.0,4461.49,64
+https://www.nehnutelnosti.sk/5361568/herrys-na-predaj-priestranny-1-izbovy-byt-s-balkonom-v-novostavbe-garazove-statie/,"HERRYS - Na predaj priestranný 1 izbový byt s balkónom v novostavbe, garážové státie",račianskanovémesto,170000.0,3563.94,48
+https://www.nehnutelnosti.sk/5358636/herrys-na-predaj-priestranny-2-izbovy-byt-s-velkym-balkonom-a-garazovym-statim-na-kolibe-jedenasta/,HERRYS- Na predaj priestranný 2 izbový byt s veľkým balkónom a garážovým státím na Kolibe -Jedenásta,jedenástanovémesto,289900.0,3901.22,74
+https://www.nehnutelnosti.sk/5357614/herrys-na-predaj-slnecny-2-izbovy-byt-s-parkovanim-v-projekte-novostavby-tarjanne-priamo-pod-lesom/,HERRYS - Na predaj slnečný 2 izbový byt s parkovaním v projekte novostavby Tarjanne priamo pod lesom,martinagrancadúbravka,225000.0,3873.97,58
+https://www.nehnutelnosti.sk/5352816/herrys-na-predaj-utulny-2-izbovy-byt-v-projekte-papaver/,HERRYS - Na predaj útulný 2 izbový byt v projekte Papaver,vlčiehrdloružinov,115900.0,3621.88,32
+https://www.nehnutelnosti.sk/5323627/herrys-na-predaj-kompletne-zrekonstruovany-3-izbovy-byt-s-krasnym-vyhladom-na-dubravske-lesy/,HERRYS - Na predaj kompletne zrekonštruovaný 3-izbový byt s krásnym výhľadom na dúbravské lesy,karolaadleradúbravka,189900.0,2693.62,70
+https://www.nehnutelnosti.sk/5310488/herrys-na-predaj-velkometrazny-2-izbovy-byt-so-samostatnou-kuchynou-na-palisadach-stetinova-ulica/,"HERRYS- Na predaj veľkometrážny 2-izbový byt so samostatnou kuchyňou na Palisádach, Štetinová ulica",štetinovastarémesto,279900.0,3498.75,80
+https://www.nehnutelnosti.sk/5303818/herrys-na-predaj-ciastocne-zrekonstruovany-3-izbovy-byt-s-moznostou-prerabky-na-4-izbovy-byt/,HERRYS - Na predaj čiastočne zrekonštruovaný 3-izbový byt s možnosťou prerábky na 4-izbový byt,kríkovávrakuňa,174990.0,2131.68,82
+https://www.nehnutelnosti.sk/5299102/herrys-na-predaj-kompletne-zrekonstruovany-3-izbovy-byt-s-vytahom-v-tehlovom-dome/,HERRYS - Na predaj kompletne zrekonštruovaný 3-izbový byt s výťahom v tehlovom dome,blumentálskastarémesto,310000.0,4309.15,72
+https://www.nehnutelnosti.sk/5255262/herrys-na-predaj-vynimocny-3-izbovy-byt-vo-vynimocnej-lokalite-pod-bratislavskym-hradom/,HERRYS - Na predaj výnimočný 3-izbový byt vo výnimočnej lokalite pod Bratislavským hradom,palisádystarémesto,449000.0,4253.1,106
+https://www.nehnutelnosti.sk/5199926/herrys-na-predaj-2-izbovy-byt-s-balkonom-v-nedavno-skolaudovanej-novostavbe-ceresne/,HERRYS - Na predaj 2 izbový byt s balkónom v nedávno skolaudovanej novostavbe Čerešne,poliankydúbravka,175000.0,3615.7,48
+https://www.nehnutelnosti.sk/5143263/herrys-na-predaj-3-izbovy-byt-v-projekte-gastanova-rezidencia-horsky-park/,HERRYS - Na predaj 3-izbový byt v projekte Gaštanová/Rezidencia Horský park,gaštanovástarémesto,380000.0,5307.26,72
+https://www.nehnutelnosti.sk/5296159/3-izbovy-byt-na-osuskeho-46-sukromny-predaj/,3 izbovy byt na Osuskeho 46-sukromny predaj,osuského1862/46petržalka,206000.0,2841.38,72
+https://www.nehnutelnosti.sk/5374821/velkometrazny-1izb-byt-rndz-balkon-standard/,"Veľkometrážny 1izb. byt RNDZ, balkón, štandard",prišajbáchrača,134900.0,2997.78,45
+https://www.nehnutelnosti.sk/5135782/zelene-zaluhy-3-izb-byt-s-predzahradkou-a-terasou-benefit-a209/,Zelené Záluhy | 3 izb. byt s predzáhradkou a terasou+benefit A209,hanulovadúbravka,398500.0,5163.25,77
+https://www.nehnutelnosti.sk/5135607/zelene-zaluhy-priestranny-3-izb-byt-s-balkonom-a409/,Zelené Záluhy | Priestranný 3-izb. byt s balkónom A409,hanulovadúbravka,369000.0,4781.03,77
+https://www.nehnutelnosti.sk/5134366/zelene-zaluhy-2-izbovy-byt-s-balkonom-benefit-a201/,Zelené Záluhy | 2-izbový byt s balkónom + benefit A201,hanulovadúbravka,235774.0,4526.28,52
+https://www.nehnutelnosti.sk/5248602/3-iz-mezonet/,3 IZ.MEZONET,jarovce,255000.0,2833.33,90
+https://www.nehnutelnosti.sk/5381952/2-izbovy-byt-50-m2-v-novostavbe-kopcianka-parking-pivnica/,"2 izbový byt 50 m2 v novostavbe Kopčianka + parking, pivnica",kopčianskapetržalka,179900.0,3598.0,50
+https://www.nehnutelnosti.sk/5361787/priestranny-slnecny-1-iz-byt-45-m2-6-m2-balkon-v-starom-meste-sancova/,"Priestranný slnečný 1 iz. byt, 45 m2 + 6 m2 balkón v Starom meste (Šancová)",šancovástarémesto,209900.0,4664.44,45
+https://www.nehnutelnosti.sk/5371083/neibrs-novostavba-nuppu-svetly-2-izb-byt-s-priestrannym-balkonom-pivnicna-kobka-v-cene/,"Neibrs | NOVOSTAVBA NUPPU- Svetlý 2 izb. BYT s priestranným balkónom, Pivničná kobka v cene",mlynskénivyružinov,219900.0,3780.95,58
+https://www.nehnutelnosti.sk/5344743/neibrs-byt-predpripraveny-na-dokoncenie-3-izby-malovky-a-stierky-samostatne-izby/,"Neibrs | Byt predpripravený na dokončenie- 3 izby, maľovky a stierky, samostatné izby",romanovapetržalka,175000.0,2397.26,73
+https://www.nehnutelnosti.sk/5379015/moderny-byt-v-projekte-nobelova/,Moderný byt v projekte Nobelova,nobelovanovémesto,209900.0,4198.0,50
+https://www.nehnutelnosti.sk/5269693/klimatizovany-4i-byt-s-terasou-v-nadstavbe-r-2006-117m2-pri-medickej-zahrade-stare-mesto/,"Klimatizovaný 4i. byt S TERASOU v nadstavbe r.2006, 117m2, pri MEDICKEJ ZÁHRADE / STARÉ MESTO.",záhradníckastarémesto,389000.0,3324.79,117
+https://www.nehnutelnosti.sk/5377621/moderny-3-izbovy-apartman-s-krasnym-zapadnym-vyhladom-na-panoramu-downtownu-a-dunaj/,MODERNÝ 3-IZBOVÝ APARTMÁN S KRÁSNYM ZÁPADNÝM VÝHĽADOM NA PANORÁMU DOWNTOWNU A DUNAJ,prístavnáružinov,365000.0,4679.49,78
+https://www.nehnutelnosti.sk/5354861/bosen-zrekonstruovany-2-izbovy-byt-v-pokojnej-lokalite-na-okraji-bratislavy-45m2/,"BOSEN | Zrekonštruovaný 2 izbový byt, v pokojnej lokalite na okraji Bratislavy, 45m2",rajeckávrakuňa,139999.0,3418.78,41
+https://www.nehnutelnosti.sk/5309990/az-property-ponuka-pekny-svetly-2-izbovy-byt-v-novostavbe-v-oblubenej-lokalite-nivy-jegeho-ulica/,"AZ PROPERTY*  ponúka pekný, svetlý 2-izbový byt v novostavbe v obľúbenej lokalite Nivy, Jégého ulica",jégéhoružinov,209000.0,4130.43,51
+https://www.nehnutelnosti.sk/4731747/verdena-uzivajte-si-aktivny-oddych-na-skok-od-vasho-domova/,Verdena - užívajte si aktívny oddych na skok od vášho domova!,rača,328080.0,4075.02,81
+https://www.nehnutelnosti.sk/4879972/akcia-standard-v-cene-3-iz-mezonet-90-m2-predzahradka-52-5-m2-v-projekte-domasska-5/,"AKCIA - ŠTANDARD V CENE! - 3 iz. mezonet (90 m2) + predzáhradka (52,5 m2) v projekte - DOMAšská 5",domašskávrakuňa,249000.0,2766.67,90
+https://www.nehnutelnosti.sk/5356793/kompletne-zrekonstruovany-2-izb-byt-zavodna-ulica-podunajske-biskupice/,"KOMPLETNE ZREKONŠTRUOVANÝ 2 IZB. BYT - ZÁVODNÁ ULICA,PODUNAJSKÉ BISKUPICE",závodnápodunajskébiskupice,110000.0,3138.37,35
+https://www.nehnutelnosti.sk/5385871/ponukame-na-predaj-krasny-dvojizbovy-byt-blumental-ba-stare-mesto/,Ponúkame na predaj krásny dvojizbový byt BLUMENTÁL – BA Staré Mesto,krížnastarémesto,265000.0,4274.19,62
+https://www.nehnutelnosti.sk/4965306/predam-3i-byt-nuppu-juniperus/,Predam 3i byt Nuppu JUNIPERUS,hraničnáružinov,252000.0,4581.82,55
+https://www.nehnutelnosti.sk/5360445/unikatny-sestizbovy-byt-pri-centre-bratislavy-s-krasnym-vyhladom-na-panoramu-mesta/,Unikátny šesťizbový byt pri centre Bratislavy s krásnym výhľadom na panorámu mesta,krasovskéhopetržalka,1150000.0,4581.67,251
+https://www.nehnutelnosti.sk/5325736/dvojizbovy-bezbarierovy-byt-na-predaj-v-ruzinove/,Dvojizbový bezbariérový byt na predaj v Ružinove,vlčiehrdloružinov,125000.0,2976.19,42
+https://www.nehnutelnosti.sk/5083689/4i-byt-ruzinov-kompletna-rekonstrukcia/,"4i BYT RUŽINOV, KOMPLETNÁ REKONŠTRUKCIA",albrechtovaružinov,225000.0,2910.74,77
+https://www.nehnutelnosti.sk/4965338/predam-2i-slnecny-byt-v-ovocne-sady/,Predam 2i slnecny byt v Ovocne sady,ivanskácestaružinov,163000.0,3543.48,46
+https://www.nehnutelnosti.sk/5260718/dahleh-novy-plne-zariadeny-3-izbovy-apartman-magnolia-1/,DAHLEH- Nový plne zariadený 3-izbový Apartman- Magnolia 1,hraničnáružinov,227000.0,3822.19,59
+https://www.nehnutelnosti.sk/5378625/na-predaj-2-izbovy-byt-bratislava-ruzinov/,NA PREDAJ 2 IZBOVÝ BYT BRATISLAVA RUŽINOV,sputnikováružinov,157500.0,3579.55,44
+https://www.nehnutelnosti.sk/4903697/predaj-slnecneho-4izboveho-bytu-v-nadstandarde-novostavba-ihned-k-nastahovaniu/,"PREDAJ slnečného 4izbového bytu v nadštandarde, novostavba, ihneď k nasťahovaniu",otaholúskazáhorskábystrica,389000.0,3784.78,103
+https://www.nehnutelnosti.sk/5385828/fiebs-luxusny-kompletne-zrekonstruovany-a-plne-zariadeny-2-izbovy-byt/,"FIEBS | Luxusný, kompletne zrekonštruovaný a plne zariadený 2 izbový byt",rajčianskavrakuňa,135990.0,3777.5,36
+https://www.nehnutelnosti.sk/5372823/lexxus-elegantny-slnecny-1-izbovy-byt-s-balkonom-v-projekte-opal-jarovce/,LEXXUS | ELEGANTNÝ SLNEČNÝ 1-IZBOVÝ BYT S BALKÓNOM V PROJEKTE OPÁL JAROVCE,aragonitovájarovce,149000.0,4027.03,37
+https://www.nehnutelnosti.sk/5329131/racany-bianco-velky-3-izbovy-byt-108-m2-s-dvomi-loggiami-v-blizkosti-malych-karpat/,"RAČANY BIANCO VEĽKÝ 3-IZBOVÝ BYT 108 m2 S DVOMI LOGGIAMI, V BLÍZKOSTI MALÝCH KARPÁT",privinohradochrača,339000.0,3138.89,108
+https://www.nehnutelnosti.sk/5211556/dvojizbovy-byt-so-samostatnou-pracovnou-v-projekte-stockerka-b210/,Dvojizbový byt so samostatnou pracovňou v projekte Stockerka (B210),vukovarskádevínskanováves,185900.0,2859.12,65
+https://www.nehnutelnosti.sk/5211472/trojizbovy-byt-v-projekte-stockerka-s-balkonom-b205-vo-vybornej-lokalite/,Trojizbový byt v projekte Stockerka s balkónom (B205) vo výbornej lokalite,vukovarskádevínskanováves,273700.0,3282.17,83
+https://www.nehnutelnosti.sk/5348911/predaj-exkluzivneho-2-izboveho-atelieru-v-projekte-eurovea-tower/,Predaj exkluzívneho 2-izbového ateliéru v projekte EUROVEA TOWER,pribinovastarémesto,345000.0,6964.07,50
+https://www.nehnutelnosti.sk/5384691/2-izbovy-byt-na-ulici-hronska/,2 izbový byt na ulici Hronská,hronskápodunajskébiskupice,155000.0,2924.53,53
+https://www.nehnutelnosti.sk/5384688/3-izbovy-byt-v-novostavbe-pri-lese-s-terasou-a-zahradkou/,3 izbový byt v novostavbe pri lese s terasou a záhradkou,čárskehokarlovaves,294000.0,3899.2,75
+https://www.nehnutelnosti.sk/5384693/krasne-presvetlena-komplet-zariadena-garsonka-v-novostavbe/,Krásne presvetlená komplet zariadená garsónka v novostavbe,žatevnádúbravka,120000.0,4615.38,26
+https://www.nehnutelnosti.sk/5374167/na-predaj-moderny-2-izb-apartman-v-panorama-city/,Na predaj moderný 2-izb. apartmán v Panorama City,landererovastarémesto,345000.0,5847.46,59
+https://www.nehnutelnosti.sk/5353246/predaj-2-izboveho-bytu-v-povodnom-stave-s-dvomi-balkonmi-v-tehlovom-bytovom-dome-na-mileticovej-ulic/,Predaj 2-izbového bytu v pôvodnom stave s dvomi balkónmi v tehlovom bytovom dome na Miletičovej ulic,miletičovaružinov,186500.0,2718.66,69
+https://www.nehnutelnosti.sk/5368000/garsonka-s-loggiou-v-petrzalke-gessayova-ulica/,"Garsónka s loggiou v Petržalke, Gessayova ulica",gessayovapetržalka,101000.0,3354.37,30
+https://www.nehnutelnosti.sk/4671822/2-izb-byt-v-novostavbe-proxenta-residence-ul-mytna-bratislava-i/,"2 IZB BYT v NOVOSTAVBE PROXENTA RESIDENCE, ul. MÝTNA, BRATISLAVA I",mýtnastarémesto,224000.0,4226.42,53
+https://www.nehnutelnosti.sk/5306226/predam-4-izbovy-byt-v-tichej-lokalite/,Predám 4 izbový byt v tichej lokalite,šášovskápetržalka,234900.0,2701.24,87
+https://www.nehnutelnosti.sk/5298795/skolaudovany-presvetleny-dvojizbovy-byt-510-s-balkonom-v-novostavbe-kesselbauer/,SKOLAUDOVANÝ Presvetlený dvojizbový byt (510) s balkónom v novostavbe Kesselbauer,námestie1.májastarémesto,317961.0,5779.01,55
+https://www.nehnutelnosti.sk/5300149/skolaudovany-hotovy-dvojizbovy-byt-511-s-balkonom-v-novostavbe-kesselbauer/,SKOLAUDOVANÝ Hotový dvojizbový byt (511) s balkónom v novostavbe Kesselbauer,námestie1.májastarémesto,319815.0,5947.83,54
+https://www.nehnutelnosti.sk/5148032/rezervovany-velkorysy-dokonceny-trojizbovy-byt-607-v-novostavbe-kesselbauer/,REZERVOVANÝ Veľkorysý dokončený trojizbový byt (607) v novostavbe Kesselbauer,námestie1.mája13starémesto,456388.0,5331.01,86
+https://www.nehnutelnosti.sk/5381397/5-izbovy-byt-s-terasou-bazenom-a-wellness-na-drotarskej-ceste/,"5 izbový byt s terasou, bazénom a wellness na Drotárskej ceste.",drotárskacestastarémesto,1.0,0.01,180
+https://www.nehnutelnosti.sk/5381452/predaj-2-izbovy-byt-s-parkovacim-statim-a-pivnicnou-kobkou-na-mytnej-ulici-v-bratislave-stare-mest/,Predaj 2-izbový byt s parkovacím státím a pivničnou kobkou na Mýtnej ulici v Bratislave – Staré Mest,mýtnastarémesto,265000.0,5196.08,51
+https://www.nehnutelnosti.sk/5380129/pekna-garsonka-v-petrzalke/,Pekná garsónka v petržalke,šustekovapetržalka,110000.0,3793.1,29
+https://www.nehnutelnosti.sk/5368417/novostavba-2i-apartmanu-v-komplexe-premiere-na-predaj/,Novostavba 2i apartmánu v komplexe Premiére na predaj,šancovástarémesto,259500.0,4398.31,59
+https://www.nehnutelnosti.sk/5037833/2i-byt-tri-veze-3-veze-vyhlad-na-mesto/,2i byt Tri veze 3 veze vyhlad na mesto,bajkalská12985/9novémesto,259000.0,3753.62,69
+https://www.nehnutelnosti.sk/5368734/na-predaj-2-izb-byt-v-petrzalke-kompletna-nova-rekonstrukcia-kuchynska-linka-na-mieru/,Na predaj 2-izb. byt v Petržalke / kompletná nová rekonstrukcia/ kuchynská linka na mieru/,beňadickápetržalka,143500.0,3776.32,38
+https://www.nehnutelnosti.sk/5385311/jurigovo-namestie-plnohodnotny-2-izbovy-byt-55-58m2/,"Jurigovo námestie - Plnohodnotný 2 - izbový byt - 55,58m2",jurigovonámestiekarlovaves,149000.0,2680.82,56
+https://www.nehnutelnosti.sk/5385292/3-izbovy-byt-s-predzahradkou-v-karlovej-vsi/,3 izbový byt s predzáhradkou v Karlovej Vsi,čárskehokarlovaves,305000.0,4045.09,75
+https://www.nehnutelnosti.sk/5359934/2i-byt-v-ruzinove-rezervovane/,2i byt v Ružinove - REZERVOVANÉ,šándorova3200/8ružinov,174900.0,3068.42,57
+https://www.nehnutelnosti.sk/5375631/velka-garsonka-s-loggiou-na-9-poschodi-pekny-vyhlad-povodny-stav/,"Veľká garsónka s loggiou na 9.poschodí, pekný výhľad, pôvodný stav",fedinovapetržalka,99900.0,2854.29,35
+https://www.nehnutelnosti.sk/5384355/predaj-3-izboveho-bytu-v-bratislave-ruzinove/,Predaj 3-izbového bytu v Bratislave Ružinove,andrejamrázaružinov,200000.0,2777.78,72
+https://www.nehnutelnosti.sk/4758346/na-predaj-2-izb-v-atraktivnej-stvrti-jegeho-alej-skolaudovana-novostavba-ihned-k-nastahovaniu/,"Na predaj 2. izb. v atraktívnej štvrti Jégeho Alej, SKOLAUDOVANÁ NOVOSTAVBA ihneď k nasťahovaniu",trnavskácestaružinov,259900.0,4399.86,59
+https://www.nehnutelnosti.sk/5384582/novinka-na-realitnom-trhu-iba-u-nas-1-izbovy-byt-v-dubravke-bazovskeho-115-000-eur-pripraveny/,"!NOVINKA NA REALITNOM TRHU-IBA U NÁS! 1 izbový byt v Dúbravke-Bazovského, 115.000,- EUR, pripravený",bazovskéhodúbravka,114777.0,3598.03,32
+https://www.nehnutelnosti.sk/5365024/2-5-izb-byt-s-balkonom-a-lodziou-teplicka-ul/,"2,5 IZB. BYT S BALKÓNOM A LODŽIOU, TEPLICKÁ UL.",teplickánovémesto,174900.0,2678.41,65

@@ -25,7 +25,6 @@ class Scraper:
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3",
             "Accept-Encoding": "none",
-           # "Accept-Language": "en-US,en;q=0.8",
             "Connection": "keep-alive",
         }
 
@@ -90,7 +89,7 @@ class Scraper:
             id += 1
     
 
-    def extract_page1(self, soup:BeautifulSoup)->List[Apartment]: #page1 is nehnutelnosti.sk
+    def extract_page1(self, soup:BeautifulSoup)->List[Apartment]: 
         offers = soup.find("div", id="inzeraty")
         apartments_in_offers = offers.findAll("div", class_="advertisement-item")
         list_of_apartments = []
@@ -117,7 +116,7 @@ class Scraper:
         return list_of_apartments
     
 
-    def extract_page2(self, soup:BeautifulSoup)->List[Apartment]: #page2 is reality.sk
+    def extract_page2(self, soup:BeautifulSoup)->List[Apartment]: 
         offers = soup.find("div", class_="offer_list")
         apartments_in_offers = offers.findAll("div", class_="offer")
         list_of_apartments = []
@@ -145,7 +144,7 @@ class Scraper:
         return list_of_apartments
     
     
-    def extract_page3(self, soup:BeautifulSoup)->List[Apartment]: #page3 is topreality.sk
+    def extract_page3(self, soup:BeautifulSoup)->List[Apartment]: 
         offers = soup.find("div", class_="listing-items")
         apartments_in_offers = offers.findAll("div", {"data-ga4-container-event" : "view_item_list"})
         list_of_apartments = []

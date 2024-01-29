@@ -9,7 +9,7 @@ import re
 @dataclass
 class Apartment:
     link: str
-    name: str   
+    title: str   
     adr: str
     price: float
     price_for_m2: float
@@ -17,7 +17,7 @@ class Apartment:
 
 
 class Scraper:
-    def __init__(self) -> None:
+    def __init__(self)->None:
         self.headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) "
             "AppleWebKit/537.11 (KHTML, like Gecko) "
@@ -29,7 +29,7 @@ class Scraper:
         }
 
 
-    def scrape_page1(self):
+    def scrape_page1(self)->None:
       
         id = 1
 
@@ -42,12 +42,12 @@ class Scraper:
                 if not apartments:
                     break
                 
-                self.write_to_csv(apartments, "./data/work_data/data-nehnutelnostisk.csv")
+                self.write_to_csv(apartments, "./data/all_websites.csv")
             except Exception as e:
                 print(f"Problem with printing: {e}")
             id += 1
         
-    def scrape_page2(self):
+    def scrape_page2(self)->None:
       
         id = 1
 
@@ -60,13 +60,13 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/work_data/data.csv")
+                self.write_to_csv(apartments, "./data/all_websites.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
         
 
-    def scrape_page3(self):
+    def scrape_page3(self)->None:
       
         id = 1
 
@@ -83,7 +83,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/work_data/data.csv")
+                self.write_to_csv(apartments, "./data/all_websites.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             id += 1
@@ -103,13 +103,13 @@ class Scraper:
                 total_area = apartment.findAll("div", class_="advertisement-item--content__info")[1].find("span").get_text().strip().replace(",", ".").replace("m2", "")
                
                 link = apartment.find("a").get("href")
-                name = apartment.find("h2").get_text().strip()
+                title = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
                 price = round(float(re.sub(r'[^0-9.]', '', price)), 2)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
 
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
+                list_of_apartments.append(Apartment(link=link, title=title, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
         
@@ -131,13 +131,13 @@ class Scraper:
                 price_for_m2 = apartment.find("p", class_="offer-price").find("small").get_text().strip().replace(",", ".")
                 
                 link = "https://www.reality.sk" + "/" + apartment.find("div", class_="offer-body").find("a").get("href")
-                name = apartment.find("h2", class_="offer-title").get("title").strip()
+                title = apartment.find("h2", class_="offer-title").get("title").strip()
                 adr = self.modify_adr(adr)
                 price = round(float(re.sub(r'[^0-9.]', '', price)), 2)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
         
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
+                list_of_apartments.append(Apartment(link=link, title=title, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
             
@@ -157,13 +157,13 @@ class Scraper:
                 total_area = apartment.find("span", class_="value").get_text().strip().replace(",", ".").replace("m2", "")
 
                 link = apartment.find("a").get("href")
-                name = apartment.find("h2").get_text().strip()
+                title = apartment.find("h2").get_text().strip()
                 adr = self.modify_adr(adr)
                 price = round(self.add_provision(price_plus_provision), 2)
                 price_for_m2 = float(re.sub(r'[^0-9.]', '', price_for_m2))
                 total_area = round(float(re.sub(r'[^0-9.]', '', total_area)))
         
-                list_of_apartments.append(Apartment(link=link, name=name, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
+                list_of_apartments.append(Apartment(link=link, title=title, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
                 print(f"Problem with extracting informations: {e}")
               
@@ -173,7 +173,7 @@ class Scraper:
     def write_to_csv(self, apartments:List[Apartment], file_name:str)->None:
         isFileCreated = os.path.exists(file_name)
         with open (file_name, "a") as file:
-            fieldnames = ["link", "name", "adr", "price","price_for_m2", "total_area" ]
+            fieldnames = ["link", "title", "adr", "price","price_for_m2", "total_area" ]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
 
             if not isFileCreated:

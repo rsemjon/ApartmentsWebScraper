@@ -5,7 +5,7 @@ scraper = Scraper()
 
 def main()->None:
 
-    websites = [NehnutelnostiSkStrategy()]
+    websites = [NehnutelnostiSkStrategy(), RealitySkStrategy(), TopRealitySkStrategy()]
 
     for website in websites:
         scraper.scrape_page(strategy=website)

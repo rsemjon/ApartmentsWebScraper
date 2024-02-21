@@ -103,7 +103,6 @@ class RealitySkStrategy(WebsiteScrapingStrategy):
 class TopRealitySkStrategy(WebsiteScrapingStrategy):
 
     def get_page_url(self, page_number: int) -> str:
-        # funguje aj s page_number == 1, neviem prečo si dal do príslušnej pôvodnej scrape metódy podmienku
         return f"https://www.topreality.sk/vyhladavanie-nehnutelnosti-{page_number}.html?type%5B0%5D=101&type%5B1%5D=108&type%5B2%5D=102&type%5B3%5D=103&type%5B4%5D=104&type%5B5%5D=105&type%5B6%5D=106&type%5B7%5D=109&type%5B8%5D=110&type%5B9%5D=107&type%5B10%5D=113&form=1&obec=1000000"
 
 

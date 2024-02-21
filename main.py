@@ -1,10 +1,14 @@
 from scraper import Scraper
+from scraping_strategies import *
+
+scraper = Scraper()
 
 def main()->None:
-    scraper = Scraper()
-    scraper.scrape_page1()
-    scraper.scrape_page2()
-    scraper.scrape_page3()
+
+    websites = [NehnutelnostiSkStrategy()]
+
+    for website in websites:
+        scraper.scrape_page(strategy=website)
     
 
 if __name__ == "__main__":

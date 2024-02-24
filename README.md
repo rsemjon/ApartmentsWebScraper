@@ -10,4 +10,4 @@ We have collected data about apartments and analyzed this data for answering que
         <li>are there any duplicate apartments on these three websites with different prices?</li>
     </ul>
 
-Results of our analysis is in Analysis_report.pdf
+Results of our analysis are in Analysis_report.pdf

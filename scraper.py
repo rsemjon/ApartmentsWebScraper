@@ -35,7 +35,7 @@ class Scraper:
                 if not apartments:
                     break
         
-                self.write_to_csv(apartments, "./data/data_for_refactor/all_websites.csv")
+                self.write_to_csv(apartments, "./data/all_websites.csv")
             except Exception as e:
                 print(f"Problem with writing: {e}")
             page_number += 1

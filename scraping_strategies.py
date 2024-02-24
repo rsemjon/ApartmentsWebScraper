@@ -62,7 +62,7 @@ class NehnutelnostiSkStrategy(WebsiteScrapingStrategy):
 
                 list_of_apartments.append(Apartment(link=link, title=title, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
-                print(f"Problem with extracting informations: {e}")
+                print(f"Missing apartment information")
         
         return list_of_apartments
 
@@ -95,7 +95,7 @@ class RealitySkStrategy(WebsiteScrapingStrategy):
         
                 list_of_apartments.append(Apartment(link=link, title=title, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area ))
             except Exception as e:
-                print(f"Problem with extracting informations: {e}")
+                print(f"Missing apartment information")
             
         return list_of_apartments
 
@@ -127,6 +127,6 @@ class TopRealitySkStrategy(WebsiteScrapingStrategy):
         
                 list_of_apartments.append(Apartment(link=link, title=title, adr=adr, price=price, price_for_m2=price_for_m2, total_area=total_area))
             except Exception as e:
-                print(f"Problem with extracting informations: {e}")
+                print(f"Missing apartment information")
               
         return list_of_apartments
